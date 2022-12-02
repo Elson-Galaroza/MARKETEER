@@ -18,7 +18,8 @@ import (
 var db *sql.DB
 
 func RetrieveForSaleItems(c *gin.Context) {
-
+	//ALLOW LOCal hoST TO BE ACCESSED BY FRONT END
+	c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
 	var retrieveAllItemsForSale itemmodels.ItemRetrieveResponse
 	var genereicResponse models.GenericResponse
 

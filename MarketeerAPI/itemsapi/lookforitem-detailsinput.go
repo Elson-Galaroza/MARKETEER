@@ -16,7 +16,7 @@ import (
 )
 
 func InputItemsForLookDetails(c *gin.Context) {
-
+	c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
 	var LookItemPayload itemmodels.LookForItemInput
 	var genereicResponse models.GenericResponse
 	var itemRetrieveResponse itemmodels.ItemRetrieveResponse

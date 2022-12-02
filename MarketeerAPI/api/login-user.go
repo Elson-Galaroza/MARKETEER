@@ -12,7 +12,7 @@ import (
 )
 
 func LogInUser(c *gin.Context) {
-
+	c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
 	var loginPayload models.InputLogIn
 	var retrieveResponse models.RetrieveResponse
 	err := c.ShouldBindJSON(&loginPayload)
@@ -90,5 +90,15 @@ func LogInUser(c *gin.Context) {
 
 		c.JSON(http.StatusOK, genereicResponse)
 	}
+	// var userkey string = "user"
+	// var currentUserID = retrieveResponse.ID
+
+	// session := sessions.Default(c)
+	// session.Set(userkey, currentUserID) // In real world usage you'd set this to the users ID
+	// if err := session.Save(); err != nil {
+	// 	c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to save session"})
+	// 	return
+	// }
+	// c.JSON(http.StatusOK, gin.H{"message": "Successfully authenticated user"})
 
 }

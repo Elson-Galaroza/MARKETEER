@@ -4,9 +4,9 @@ type ItemRetrieveResponse struct {
 	Code         int32  `json:"code,omitempty"`
 	Status       string `json:"status,omitempty"`
 	Message      string `json:"message,omitempty"`
-	ItemID       int    `json:"Item ID,omitempty"`
-	ItemCategory string `json:"Item Caegory"`
-	SellerID     int    `json:"Seller ID"`
+	ItemID       int    `json:"ItemID,omitempty"`
+	ItemCategory string `json:"ItemCategory"`
+	SellerID     int    `json:"SellerID"`
 
 	// FirstName  string `json:"FirstName"`
 	// LastName   string `json:"LastName"`
@@ -15,15 +15,12 @@ type ItemRetrieveResponse struct {
 	// BirthDate  string `json:"BirthDate"`
 	// Address    string `json:"Address"`
 	// UserName   string `json:"Username"`
-	
-	ItemLookID       int    `json:"Item Look ID,omitempty"`
-	ItemImageLinkURL string `json:"Item Image URL,omitempty"`
-	ItemName         string `json:"Item Name,omitempty"`
-	ItemPrefPrice    int    `json:"Item Preferred Price,omitempty"`
-	ItemPrice        int    `json:"Item Price,omitempty"`
-	ItemQty          int    `json:"Item Quantity,omitempty"`
-	ItemDesc         string `json:"Item Description,omitempty"`
 
-
-	
+	ItemLookID       int    `json:"ItemLookID,omitempty"`
+	ItemImageLinkURL string `json:"ItemImageURL,omitempty"`
+	ItemName         string `json:"ItemName,omitempty"`
+	ItemPrefPrice    int    `json:"ItemPreferred Price,omitempty"`
+	ItemPrice        int    `json:"ItemPrice,omitempty"`
+	ItemQty          int    `json:"ItemQuantity,omitempty"`
+	ItemDesc         string `json:"ItemDescription,omitempty"`
 }

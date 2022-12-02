@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Elson-Galaroza/marketeer_Main/issues"
   },
-  "homepage": "https://github.com/Elson-Galaroza/marketeer_Main#readme"
+  "homepage": "https://github.com/Elson-Galaroza/marketeer_Main#readme",
+  "dependencies": {
+    "axios": "^1.2.0"
+  }
 }

@@ -18,7 +18,7 @@ import (
 var db *sql.DB
 
 func InputSellItemDetails(c *gin.Context) {
-
+	c.Writer.Header().Set("Access-Control-Allow-Origin", "*")		
 	var sellItemPayload itemmodels.SellItemInput
 	var genereicResponse models.GenericResponse
 	var itemRetrieveResponse itemmodels.ItemRetrieveResponse

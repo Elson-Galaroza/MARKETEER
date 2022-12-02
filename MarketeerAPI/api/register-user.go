@@ -24,7 +24,7 @@ var genereicResponse models.GenericResponse
 var retrieveResponse models.RetrieveResponse
 
 func RegisterUser(c *gin.Context) {
-
+	c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
 	errJson := c.ShouldBindJSON(&registrationPayload)
 
 	if errJson == nil {
@@ -126,7 +126,7 @@ func RegisterUser(c *gin.Context) {
 }
 
 func getUserID() {
-
+	
 	var (
 		id         int
 		firstName  string
